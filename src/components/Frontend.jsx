@@ -1,12 +1,15 @@
 import React from 'react';
 
-export default function Home() {
+export default function Frontend() {
+
   return (
     <main className='principal'>
-      <h2>Últimos lançamentos</h2>
+
+      <h2>Categoria frontend</h2>
       <div className="card">
-        <p>Conteúdos da Home Page</p>
+        <p>Conteúdo da página Frontend</p>
       </div>
+
     </main>
   );
 }
