@@ -8,11 +8,11 @@ export default function Navegacao() {
   return (
 
     <ul>
-      <li><NavLink exact activeStyle={linkCorrent} to='/'>Home</NavLink></li>
-      <li><NavLink exact activeStyle={linkCorrent} to='/frontend'>Frontend</NavLink></li>
-      <li><NavLink exact activeStyle={linkCorrent} to='/programacao'>Programacao</NavLink></li>
-      <li><NavLink exact activeStyle={linkCorrent} to='/design'>Design</NavLink></li>
-      <li><NavLink exact activeStyle={linkCorrent} to='/catalogo'>Catálogo</NavLink></li>
+      <li><NavLink exact='true' activestyle={linkCorrent} to='/'>Home</NavLink></li>
+      <li><NavLink exact='true' activestyle={linkCorrent} to='/frontend'>Frontend</NavLink></li>
+      <li><NavLink exact='true' activestyle={linkCorrent} to='/programacao'>Programacao</NavLink></li>
+      <li><NavLink exact='true' activestyle={linkCorrent} to='/design'>Design</NavLink></li>
+      <li><NavLink exact='true' activestyle={linkCorrent} to='/catalogo'>Catálogo</NavLink></li>
     </ul>
   );
 }
