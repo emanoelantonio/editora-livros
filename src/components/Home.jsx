@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const Home = ({ livros }) => (
   <main className="principal">
-    <h2>├Ültimos lan├žamentos</h2>
+    <h2>Últimos Lançamentos</h2>
     {livros
       .filter((n, index) => index < 6)
       .map((livro) => (
