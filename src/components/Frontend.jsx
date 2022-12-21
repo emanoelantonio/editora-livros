@@ -1,15 +1,34 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Frontend() {
+const Frontend = ({ livros }) => (
+  <main className='principal'>
 
-  return (
-    <main className='principal'>
+    <h2>Categoria frontend</h2>
+    {livros.filter((cat) => cat.categoria === 'frontend').map((livro) => (
 
-      <h2>Categoria frontend</h2>
-      <div className="card">
-        <p>Conteúdo da página Frontend</p>
+      <div className="card" key={livro.id}>
+        <div className="thumb">
+          <img src={'/imagens/capas/' + livro.id + '.jpg'} alt="Thumbnail da capa do libro..." />
+        </div>
+
+        {livros.filter((c) => c.slug === livro.slug).map((livro) =>(
+          <span key={livro.slug}>
+            <Link to={`/livro/${livro.slug}`}>
+              {
+                <div className="detalhes">
+                  <h3>{livro.titulo}</h3>
+                  <p>{livro.descricao.slice(0, 130) + '...'}</p>
+                  <p>Leia Mais &gt;</p>
+                </div>
+              }
+            </Link>
+          </span>
+        ))}
       </div>
+    ))}
 
-    </main>
-  );
-}
+  </main>
+);
+
+export default Frontend;
